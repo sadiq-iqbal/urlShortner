@@ -7,13 +7,14 @@ const urlSchema = mongoose.Schema({
     },
     longUrl: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     visitHistory: {
-        type: Array
+        type: [{ timestamp: String }]
     }
 }, { timestamps: true });
 
 
-const URL = mongoose.model("URL", urlSchema);
+const URL = mongoose.model("urls", urlSchema);
 module.exports = URL;

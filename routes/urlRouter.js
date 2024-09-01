@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
+const urlController = require("../controllers/urlControllers");
 
-
-router.post('/', handleGenerateShortUrl);
-router.get("/:id", handleRedirectToOriginalUrl);
-router.get("/analytics/:id", handleGetAnalytics);
+router.post('/', urlController.handleGenerateShortUrl);
+router.get("/:id", urlController.handleRedirectToOriginalUrl);
+router.get("/analytics/:id", urlController.handleGetAnalytics);
 
 
 module.exports = router;

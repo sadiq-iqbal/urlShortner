@@ -9,9 +9,12 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
     "express": "^4.19.2",
     "mongoose": "^8.6.0",
-    "nanoid": "^5.0.7",
-    "nodemon": "^3.1.4"
+    "nanoid": "^2.1.11",
+    "nodemon": "^3.1.4",
+    "urlshortner": "file:"
   }
 }
