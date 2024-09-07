@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Url Shortner</title>
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+  <body class="bg-black bg-gradient-to-r from-teal-400 to-blue-300">
+    <header
+      class="bg-white text-cente rounded-br-xl rounded-bl-xl text-center p-3"
+    >
+      <h1 class="text-3xl font-sans font-extrabold text-teal-500">
+        Url Shortner
+      </h1>
+    </header>
+    <main class="max-w-3xl mx-auto p-4">
+      <div class="bg-white p-4 rounded-lg">
+        <form
+          action="/url"
+          method="post"
+          class="flex gap-2 justify-between flex-row px-3"
+        >
+          <input
+            class="flex-grow pl-4 text-xl italic"
+            type="text"
+            name="url"
+            placeholder="https://example.com"
+            autocomplete="off"
+          />
+          <button
+            type="submit"
+            class="bg-teal-600 transition-all hover:rounded-none text-white border-2 m-1 rounded-3xl p-2"
+          >
+            Shorten
+          </button>
+        </form>
+      </div>
+      <div
+        class="table text-center overflow-hidden rounded-2xl mt-4 p-4 bg-white text-black w-full"
+      >
+        <table class="w-full p-4">
+          <thead>
+            <tr>
+              <th>S:No</th>
+              <th>Long URL</th>
+              <th>Tiny URL</th>
+              <th>visits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% urls.forEach((element , index )=> { %>
+            <tr>
+              <td><%= index + 1 %></td>
+              <td><%= element.longUrl.slice(0, 30) %></td>
+              <td>
+                <a class="text-teal-600" href="<%= element.shortId %>">
+                  <%= element.shortId.slice(0, 30) %></a
+                >
+              </td>
+              <td><%= element.visitHistory.length %></td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>

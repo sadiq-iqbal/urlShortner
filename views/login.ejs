@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+  <body
+    class="bg-black bg-gradient-to-r from-teal-400 to-blue-300 min-h-full min-w-full overflow-hidden"
+  >
+    <form
+      action="/url/login"
+      method="post"
+      class="m-auto shadow-xl mt-[30px] sm:mt-[100px] h-[3 00px] max-w-[300px] sm:max-w-[400px] p-5 rounded-2xl bg-white text-black"
+    >
+      <h2 class="text-3xl text-center text-bolder">Login</h2>
+      <div>
+        <label for="username " class="relative left-[100000px]">email:</label>
+        <input
+          type="text"
+          placeholder="email"
+          name="email"
+          class="border-b-2 border-b-teal-600 w-full focus:outline-none p-2 mt-4"
+        />
+      </div>
+      <div>
+        <label for="password" class="relative left-[100000px]">Password:</label>
+        <input
+          type="password"
+          placeholder="password"
+          name="password"
+          class="border-b-2 border-b-teal-600 w-full focus:outline-none p-2 mt-4"
+        />
+      </div>
+
+      <div>
+        <button
+          class="w-full p-6 border-2 active:bg-teal-400 bg-teal-600 text-white rounded-md font-extrabold border-white text-center mt-12 mb-4"
+          type="submit"
+        >
+          Login
+        </button>
+      </div>
+      <div class="text-center">
+        <a href="/url/signup" class="text-teal-700"
+          >don't have an account yet?</a
+        >
+      </div>
+    </form>
+  </body>
+</html>
