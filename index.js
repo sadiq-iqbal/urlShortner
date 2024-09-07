@@ -27,11 +27,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 // app.use(logs);
-// app.use(loggedInUserOnly);
+// app.use();
 app.use("/url", express.static('public'));
-// app.use('/', staticRouter)
-app.use("/url", urlRouter);
-// app.use("/url", express.static('public'));
+app.use("/", express.static('public'));
+app.use('/', staticRouter)
+app.use("/url", loggedInUserOnly, urlRouter);
 
 
 //? ___________server___________\\
